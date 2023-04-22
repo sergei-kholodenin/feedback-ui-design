@@ -1,16 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 *{
     box-sizing: border-box;
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+}
+
+.panel-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, .3);
+    border-radius: 4px;
+    font-size: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.panel-container strong {
+    line-height: 20px;
+}
+
+.ratings-container {
+    display: flex;
+    margin: 20px 0;
+}
+
+.rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    padding: 40px;
+}
+
+.rating img {
+    height: 40px;
+}
+
+.rating:hover, .rating.active {
+    border-radius: 4px;
+    box-shadow: 0 0 10px hsla(0, 0%, 0%, .1);
+}
+
+.rating small {
+    color: hsl(0 0% 35%);
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.rating:hover small, 
+.rating.active small {
+    color: hsl(0 0% 0%);
+}
+
+.btn {
+    background-color: hsl(0 0% 20%);
+    color:#fff;
+    border-radius: 4px;
+    padding: 12px 30px;
+    border:0;
+    cursor: pointer;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.fa-heart {
+    color: red;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
